@@ -1,11 +1,10 @@
 ## Purpose ##
 
-Provide an integrated Hello World application demonstrating JPA persistence using Hibernate and PostgreSQL,
-in the context of a very simple web application. This demo does not use any real frameworks except for JSTL for a little bit
-of JSP processing. 
+Provide an integrated starter project for SpringMVC + Spring ORM, backed by Hibernate and PostgreSQL. 
 
-This pattern should not be used for all but the simplest possible use cases. However, it's useful to have as a skeleton starting
-point for a java web application when you don't want to incorporate the complexities of an actual web framework.
+This project demonstrates a variety of useful functions right out of the box, and can be used as a starting point for a real web application.
+It makes extensive use of SpringMVC for the web tier. It also uses Spring to replace the direct access to the JPA entity manager API and 
+instead uses Spring dependency injection patterns to access data.
 
 ## Technologies ##
 
@@ -18,6 +17,16 @@ point for a java web application when you don't want to incorporate the complexi
 * Log4J via SLF4J
 * JUnit
 * Hibernate maven plugin
+* Spring MVC
+* Spring ORM
+
+## Features demonstrated ##
+
+* JSTL page rendering
+* Implementation of REST API, automatically returning JSON serialization.
+* Parsing and controller routing in Spring MVC
+* File upload
+* Database access via injected DAO objects
 
 ## Setup and run ##
 
@@ -28,5 +37,4 @@ Assuming you have setup your postgres database separately and have updated persi
 3. Use target/hibernate3/sql/schema.ddl to create your database schema
 4. mvn -e exec:java -Dexec.mainClass=com.force.samples.util.DataLoadUtil  (adds some data to the database)
 5. mvn tomcat:run
-6. Point browser at [http://localhost:8080/webapp-jsp-jpa-hibernate/listbooks](http://localhost:8080/webapp-jsp-jpa-hibernate/listbooks)
-7. Or try [http://localhost:8080/webapp-jsp-jpa-hibernate/](http://localhost:8080/webapp-jsp-jpa-hibernate/)
+6. Point browser at [http://localhost:8080/webapp-springmvc-jpa-hibernate](http://localhost:8080/webapp-springmvc-jpa-hibernate)
